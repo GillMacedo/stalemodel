@@ -1,6 +1,6 @@
 {
   "name": "stalemodel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Catches outdated AI model names in code and looks up current models, prices and limits.",
   "author": {
     "name": "Giulliano Macedo",
