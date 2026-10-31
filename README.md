@@ -13,20 +13,22 @@ As a Claude Code plugin, which adds the MCP server and a skill that tells Claude
     claude plugin marketplace add GillMacedo/stalemodel
     claude plugin install stalemodel@stalemodel-marketplace
 
-For other MCP clients, run it from GitHub. You need Node 22.19 or newer:
+For other MCP clients, run it from npm. You need Node 22.19 or newer. It's also in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.GillMacedo/stalemodel) as `io.github.GillMacedo/stalemodel`.
 
 ```json
 {
   "mcpServers": {
     "stalemodel": {
       "command": "npx",
-      "args": ["-y", "github:GillMacedo/stalemodel", "serve"]
+      "args": ["-y", "stalemodel", "serve"]
     }
   }
 }
 ```
 
 ## Usage
+
+Without installing anything, run `npx stalemodel scan .`. The examples below run from a clone of this repo.
 
 **Scan a project.** Only quoted strings count, and `scan` exits 1 on findings, so it can run in CI.
 
