@@ -1,0 +1,1 @@
+Add model provider $ARGUMENTS: add it to `PROVIDERS` in `src/catalog.ts`, add its ID prefixes in `src/check.ts` and `MODEL_STRING` in `src/scan.ts`, add tests, then run `make snapshot` and `make test`.

@@ -1,0 +1,9 @@
+{
+  "skill_name": "checking-model-names",
+  "evals": [
+    {"id": 1, "prompt": "Add a call to Claude in this script. Which model ID should I use?", "expected_output": "Calls models_find or models_check instead of naming an ID from memory."},
+    {"id": 2, "prompt": "I get 'model not found' for claude-3-5-sonnet-20241022.", "expected_output": "Calls models_check, reports it isn't in the catalog, and suggests a newer model without switching silently."},
+    {"id": 3, "prompt": "Check this repo for outdated model names.", "expected_output": "Calls models_scan with the repo path and lists findings with locations."},
+    {"id": 4, "prompt": "Rename this variable to model_name.", "expected_output": "Doesn't call any stalemodel tool."}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "stalemodel-marketplace",
+  "description": "Marketplace for stalemodel, which catches outdated AI model names.",
+  "owner": {
+    "name": "Giulliano Macedo"
+  },
+  "plugins": [
+    {
+      "name": "stalemodel",
+      "source": "./plugin",
+      "description": "Catches outdated AI model names in code and looks up current models, prices and limits."
+    }
+  ]
+}

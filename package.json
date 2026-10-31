@@ -1,0 +1,42 @@
+{
+  "name": "stalemodel",
+  "version": "0.1.0",
+  "description": "Catch outdated AI model names in code, and look up current models, prices and limits.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Giulliano Macedo (https://github.com/GillMacedo)",
+  "homepage": "https://github.com/GillMacedo/stalemodel",
+  "repository": "github:GillMacedo/stalemodel",
+  "mcpName": "io.github.GillMacedo/stalemodel",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "claude",
+    "claude-code",
+    "llm",
+    "ai-models",
+    "linter"
+  ],
+  "bin": {
+    "stalemodel": "plugin/dist/stalemodel.js"
+  },
+  "files": [
+    "plugin/dist"
+  ],
+  "engines": {
+    "node": ">=22.19"
+  },
+  "scripts": {
+    "build": "esbuild src/main.ts --bundle --platform=node --format=esm --target=node22 --outfile=plugin/dist/stalemodel.js --banner:js=\"#!/usr/bin/env node\nimport { createRequire } from 'node:module'; const require = createRequire(import.meta.url);\"",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.ts",
+    "snapshot": "node scripts/snapshot.ts"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/server": "2.4.0",
+    "@types/node": "26.6.6",
+    "esbuild": "0.28.2",
+    "typescript": "7.0.2",
+    "zod": "4.6.7"
+  }
+}
