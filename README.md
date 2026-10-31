@@ -1,10 +1,19 @@
-# stalemodel
+# stalemodel: find deprecated AI model names in your code
 
-**Catch outdated AI model names before your coding agent ships them.**
+[![npm](https://img.shields.io/npm/v/stalemodel)](https://www.npmjs.com/package/stalemodel) [![CI](https://github.com/GillMacedo/stalemodel/actions/workflows/ci.yml/badge.svg)](https://github.com/GillMacedo/stalemodel/actions/workflows/ci.yml) [![MIT license](https://img.shields.io/badge/license-MIT-blue)](LICENSE) [![MCP Registry](https://img.shields.io/badge/MCP_Registry-listed-green)](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.GillMacedo/stalemodel)
 
-Agents write model IDs from training data, so new code often calls models that are deprecated or gone. `stalemodel` checks IDs against a live catalog, suggests the newest model in the same family, and gives agents current prices and limits. It's an MCP server and a CLI. It needs no API key or account, sends no code anywhere, and falls back to a bundled snapshot when offline.
+**Catch outdated OpenAI, Claude and Gemini model IDs before your coding agent ships them, and look up current LLM prices and context limits.**
 
-It covers Anthropic, OpenAI, Google, xAI, DeepSeek and Mistral.
+Coding agents write model IDs from old training data, so new code often calls models that are deprecated or gone, and fails with errors like "model not found". `stalemodel` checks IDs against a live catalog, suggests the newest model in the same family, and gives agents current LLM pricing and limits. It's an MCP server and a CLI. It needs no API key or account, sends no code anywhere, and falls back to a bundled snapshot when offline.
+
+It covers Anthropic Claude, OpenAI GPT, Google Gemini, xAI Grok, DeepSeek and Mistral.
+
+## What you can ask your agent
+
+- "Which Claude model ID should I use, and what does it cost?"
+- "Why do I get 'model not found' for claude-3-5-sonnet-20241022?"
+- "Check this repo for deprecated model names."
+- "What's the cheapest current model with tool calling and a 1M context window?"
 
 ## Install
 
@@ -68,6 +77,14 @@ All three are read-only.
 - "Not in catalog" can also mean a new, private or misspelled model.
 - `try` is a suggestion based on family and release date. Check price and behavior before switching.
 - `scan` only sees quoted IDs, so it misses IDs built at runtime. It also doesn't flag bare `gpt-4o`-style IDs that are old but still current.
+
+## FAQ
+
+**How do I find deprecated LLM models in my code?** Run `npx stalemodel scan .`. It exits 1 on findings, so it also works as a CI check.
+
+**Where does the pricing data come from?** From [models.dev](https://models.dev), fetched live, with a snapshot bundled for offline use.
+
+**Does it work outside Claude Code?** It's a standard MCP server, so it should work in any MCP client. So far it has only been tested in Claude Code.
 
 ## Contributing
 
