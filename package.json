@@ -18,7 +18,12 @@
     "claude-code",
     "llm",
     "ai-models",
-    "linter"
+    "linter",
+    "openai",
+    "gemini",
+    "llm-pricing",
+    "deprecated-models",
+    "model-context-protocol"
   ],
   "bin": {
     "stalemodel": "plugin/dist/stalemodel.js"
