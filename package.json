@@ -1,6 +1,6 @@
 {
   "name": "stalemodel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Catch outdated AI model names in code, and look up current models, prices and limits.",
   "type": "module",
   "license": "MIT",
@@ -18,7 +18,12 @@
     "claude-code",
     "llm",
     "ai-models",
-    "linter"
+    "linter",
+    "openai",
+    "gemini",
+    "llm-pricing",
+    "deprecated-models",
+    "model-context-protocol"
   ],
   "bin": {
     "stalemodel": "plugin/dist/stalemodel.js"
