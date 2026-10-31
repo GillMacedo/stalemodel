@@ -6,7 +6,10 @@
   "license": "MIT",
   "author": "Giulliano Macedo (https://github.com/GillMacedo)",
   "homepage": "https://github.com/GillMacedo/stalemodel",
-  "repository": "github:GillMacedo/stalemodel",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GillMacedo/stalemodel.git"
+  },
   "mcpName": "io.github.GillMacedo/stalemodel",
   "keywords": [
     "mcp",

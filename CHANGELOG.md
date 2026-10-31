@@ -3,6 +3,8 @@
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
+### Changed
+- README installs from npm
 
 ## [0.1.0] - 2026-10-31
 ### Added
