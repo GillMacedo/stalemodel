@@ -24,4 +24,4 @@ Catches outdated AI model IDs and looks up current models. It's an MCP server, a
 - "Unknown" never means "wrong": keep that distinction in output and docs.
 
 ## Definition of done
-Tests pass, the bundle is rebuilt, README examples match, and `CHANGELOG.md` and `ROADMAP.md` are updated if relevant. Only the maintainer merges to `main`.
+Tests pass, the bundle is rebuilt, README examples match, and `ROADMAP.md` is updated if relevant. Only the maintainer merges to `main`.
